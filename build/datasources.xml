@@ -1,0 +1,57 @@
+<datasources>
+	<!-- 
+		nuodb test datasource
+	 -->
+	<datasource 
+		name="cfml.nuodb" 
+		class="com.nuodb.jdbc.Driver" 
+		host="127.0.0.1"
+		port="" 
+		database="@dsn.database@"
+		username="@dsn.username@" 
+		password="@dsn.password@" 
+		blob="false"
+		clob="false" 
+		sqlstoredprocedures="true"
+		sqlinsert="true"
+		sqlselect="true"
+		sqlupdate="true"
+		sqldelete="true"
+		maintainconnection="true"
+		logintimeout="120"
+		connectionretries="0"
+		connectionlimit="-1"
+		connectiontimeout="1"
+		custom=""
+		jdbcstring="jdbc:com.nuodb://127.0.0.1/@dsn.database@"
+		jdbc="noudb"
+		 />
+
+	<datasource 
+		name="nuodb_blog" 
+		class="com.nuodb.jdbc.Driver" 
+		host="127.0.0.1"
+		port="" 
+		database="@dsn.database@"
+		username="@dsn.username@" 
+		password="@dsn.password@" 
+		jdbcstring="jdbc:com.nuodb://127.0.0.1/@dsn.database@?schema=hockey"
+		jdbc="noudb"
+		 />
+	<!-- 
+	MySQL example
+	
+	<datasource 
+		name="cfml.nuodb" 
+		host="127.0.0.1" 
+		port="3306" 
+		database="cfml.nuodb"
+		username="@dsn.username@" 
+		password="@dsn.password@" 
+		jdbc="mysql"
+		class="org.gjt.mm.mysql.Driver" 
+		jdbcstring="jdbc:mysql://127.0.0.1:3306/cfml.nuodb"
+		 />
+ 	-->
+
+</datasources>

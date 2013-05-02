@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--
+source:/workspace/cfml.nuodb/tests/nuodb/hockey.cfc
+compilation-time:{ts '2013-05-02 03:06:40'}
+-->
+<class catalog="hockey" entity-name="hockey" lazy="true" node="tests.nuodb.hockey" table="hockey">
+<id name="ID" type="integer">
+<column name="ID"/>
+<generator class="identity"/>
+</id>
+<property name="NUMBER" type="double">
+<column name="`NUMBER`"/>
+</property>
+<property name="NAME" type="string">
+<column name="NAME"/>
+</property>
+<property name="POSITION" type="string">
+<column name="`POSITION`"/>
+</property>
+<property name="TEAM" type="string">
+<column name="TEAM"/>
+</property>
+</class>
+</hibernate-mapping>

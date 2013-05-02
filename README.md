@@ -2,8 +2,8 @@ Example of using NuoDB as a datasource and an hibernate dialect
 
 Either use cfdistro via:
 
-  ./cfml.nuodb build
-  ./cfml.nuodb runwar.start.fg
+>  ./cfml.nuodb build
+>  ./cfml.nuodb runwar.start.fg
 
 Or manually copy the jars from ./lib to WEB-INF/lib
 

@@ -4,6 +4,7 @@ Either use cfdistro via:
 
 >  ./cfml.nuodb build  
 >  ./cfml.nuodb runwar.start.fg
+>  open browser to http://127.0.0.1:8088/  
 
 Or manually copy the jars from ./lib to WEB-INF/lib
 

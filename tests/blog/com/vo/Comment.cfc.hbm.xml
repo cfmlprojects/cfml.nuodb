@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--
+source:/workspace/cfml.nuodb/tests/blog/com/vo/Comment.cfc
+compilation-time:{ts '2013-05-02 02:37:08'}
+-->
+<class entity-name="Comment" lazy="true" node="tests.blog.com.vo.Comment" table="`Comment`">
+<id name="commentID" type="integer">
+<column name="commentID"/>
+<generator class="identity"/>
+</id>
+<timestamp column="published" name="published"/>
+<property name="commenterName" type="string">
+<column length="255" name="commenterName"/>
+</property>
+<property name="commenterEmail" type="string">
+<column name="commenterEmail"/>
+</property>
+<property name="commentBody" type="string">
+<column name="commentBody"/>
+</property>
+<many-to-one column="postID" entity-name="Post" name="post" not-found="ignore"/>
+</class>
+</hibernate-mapping>

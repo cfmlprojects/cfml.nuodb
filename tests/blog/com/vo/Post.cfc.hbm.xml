@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!--
+source:/workspace/cfml.nuodb/tests/blog/com/vo/Post.cfc
+compilation-time:{ts '2013-05-02 02:37:08'}
+-->
+<class entity-name="Post" lazy="true" node="tests.blog.com.vo.Post" table="Post">
+<id name="postID" type="integer">
+<column name="postID"/>
+<generator class="identity"/>
+</id>
+<timestamp column="published" name="published"/>
+<property name="title" type="string">
+<column length="255" name="title"/>
+</property>
+<property name="body" type="string">
+<column name="body"/>
+</property>
+<bag cascade="all-delete-orphan" inverse="true" name="comments" order-by="published">
+<key column="postID"/>
+<one-to-many entity-name="Comment"/>
+</bag>
+</class>
+</hibernate-mapping>
